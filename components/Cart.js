@@ -11,7 +11,7 @@ const Cart = () => {
   // const [item, setItem] = useState(products);
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  // to delete the indv. elements from an Item Cart
+ 
   const removeItem = (id) => {
     return dispatch({
       type: "REMOVE_ITEM",
@@ -19,12 +19,12 @@ const Cart = () => {
     });
   };
 
-  // clear the cart
+ 
   const clearCart = () => {
     return dispatch({ type: "CLEAR_CART" });
   };
 
-  // increment the item
+ 
   const increment = (id) => {
     return dispatch({
       type: "INCREMENT",
@@ -32,7 +32,7 @@ const Cart = () => {
     });
   };
 
-  // decrement the item
+ 
   const decrement = (id) => {
     return dispatch({
       type: "DECREMENT",
@@ -40,7 +40,7 @@ const Cart = () => {
     });
   };
 
-  // we will use the useEffect to update the data
+ 
   useEffect(() => {
     dispatch({ type: "GET_TOTAL" });
     // console.log("Awesome");
